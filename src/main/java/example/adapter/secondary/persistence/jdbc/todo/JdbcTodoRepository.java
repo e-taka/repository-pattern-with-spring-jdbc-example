@@ -11,12 +11,14 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
+
 import example.domain.todo.NewTodo;
 import example.domain.todo.Todo;
 import example.domain.todo.TodoFilter;
 import example.domain.todo.TodoRepository;
 
-//@Repository
+@Repository
 public class JdbcTodoRepository implements TodoRepository {
     @Autowired
     private NamedParameterJdbcTemplate jdbcTemplate;
