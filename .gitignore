@@ -3,5 +3,4 @@
 !/src
 
 !.gitignore
-!build.gradle
-!settings.gradle
+!pom.xml
