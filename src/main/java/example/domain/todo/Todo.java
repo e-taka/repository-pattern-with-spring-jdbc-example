@@ -1,13 +1,21 @@
 package example.domain.todo;
 
+import org.seasar.doma.Entity;
+import org.seasar.doma.GeneratedValue;
+import org.seasar.doma.GenerationType;
+import org.seasar.doma.Id;
+
 import lombok.*;
 
 @Data
-@Builder
+@Builder()
 @NoArgsConstructor
 @AllArgsConstructor
 @With
+@Entity(immutable = true)
 public class Todo {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String desc;
